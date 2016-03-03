@@ -1,7 +1,7 @@
 /************************************************
- * Nopel										*
- * Author: Kuntharith Buon						*
- * Updated: 03/03/16							*
+ * Nopel          *
+ * Author: Kuntharith Buon      *
+ * Updated: 03/03/16       *
  ************************************************/
 
 package nopel;
@@ -19,39 +19,40 @@ import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
 public class MainFrame {
-	private JFrame userFrame;
-	protected final int WIDTH = 800, HEIGHT = 600;
-	protected final int BTN_WIDTH = 150, BTN_HEIGHT = 75;
-	JButton b = new JButton();
-	public MainFrame() {
-		//Frame
-		userFrame = new JFrame();
-		userFrame.setSize(WIDTH, HEIGHT);
-		userFrame.setVisible(true);
-		userFrame.setTitle("Nopel");
-		userFrame.setResizable(true);
-		userFrame.setDefaultCloseOperation(userFrame.EXIT_ON_CLOSE);
-		userFrame.setLayout(new GridLayout(1, 2));
-		userFrame.getContentPane().setBackground(Color.DARK_GRAY);
-		
-		//Test Separator
-		JSeparator separator = new JSeparator(SwingConstants.VERTICAL);
-		userFrame.getContentPane().add(new JLabel("Label"));
-		userFrame.getContentPane().add(separator);
-		
-//		//Button
-//		b.setText("BUTTON");
-//		b.setSize(10, 30);
-//		b.setVisible(true);
-//		b.addActionListener(new ActionListener(){
-//			public void actionPerformed(ActionEvent e){
-//				System.out.println("Hello World");
-//			}
-//		});
-//		
-//		b.setBackground(Color.white);
-//	
-//		userFrame.add(b);
-		userFrame.validate();
-	}
+ private JFrame userFrame;
+ protected final int WIDTH = 800, HEIGHT = 600;
+ protected final int BTN_WIDTH = 150, BTN_HEIGHT = 75;
+ JButton b = new JButton();
+ public MainFrame() {
+  //Frame
+  userFrame = new JFrame();
+  userFrame.setSize(WIDTH, HEIGHT);
+  userFrame.setVisible(true);
+  userFrame.setTitle("Nopel");
+  userFrame.setResizable(true);
+  userFrame.setDefaultCloseOperation(userFrame.EXIT_ON_CLOSE);
+  userFrame.setLayout(new GridLayout(1,3));
+  userFrame.getContentPane().setBackground(Color.DARK_GRAY);
+  
+  //Test Separator
+  JSeparator separator = new JSeparator(SwingConstants.VERTICAL);
+  userFrame.getContentPane().add(new JLabel("Label2"));
+  userFrame.getContentPane().add(separator,1);
+  userFrame.getContentPane().add(new JLabel("Label"));
+  
+//  //Button
+//  b.setText("BUTTON");
+//  b.setSize(10, 30);
+//  b.setVisible(true);
+//  b.addActionListener(new ActionListener(){
+//   public void actionPerformed(ActionEvent e){
+//    System.out.println("Hello World");
+//   }
+//  });
+//  
+//  b.setBackground(Color.white);
+// 
+//  userFrame.add(b);
+  userFrame.validate();
+ }
 }
